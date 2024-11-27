@@ -14,6 +14,11 @@
     visibility: hidden;  
 }
 
+.close-sidebar{
+    text-align: right;
+    padding:10px;
+}
+
 .menu{
     background-color:white ;
     margin: 25px 25px;
@@ -43,9 +48,12 @@
     </style>        
 </head>
 <body>
-    <i class="fa-solid fa-bars   bars"  onclick="openSideBar()"></i>
+    <i class="fa-solid fa-bars   bars"  id="bars"  onclick="openSideBar()"></i>
 
     <div id="sidebar" class="sidebar">
+        <div class="close-sidebar">
+            <i class="fa-solid fa-xmark"  onclick="closeSidebar()"></i>
+        </div>
         <div class="menu">
             <a href="#" class="menu-text"><i class="fas fa-home" ></i> Home</a>
         </div>
@@ -76,6 +84,18 @@
         function openSideBar(){
             sidebarElement = document.getElementById("sidebar");
             sidebarElement.style.visibility="visible";
+
+            const hamburgerMenu = documents.getElementById("bars");
+            hamburgerMenu.style.visibility="hidden";
+        }
+
+        function closeSidebar(){
+            const sidebarElement = document.getElementById("sidebar");
+            sidebarElement.style.visibility="hidden";
+
+            const hamburgerMenu = documents.getElementById("bars");
+            hamburgerMenu.style.visibility="visible";
+
         }
 </script>
 </body>
