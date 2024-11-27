@@ -43,7 +43,7 @@
     </style>        
 </head>
 <body>
-    <i class="fa-solid fa-bars   bars"  ></i>
+    <i class="fa-solid fa-bars   bars"  onclick="openSideBar()"></i>
 
     <div id="sidebar" class="sidebar">
         <div class="menu">
@@ -72,5 +72,11 @@
 
 
 <script src="https://kit.fontawesome.com/10e1ccecc8.js" crossorigin="anonymous"></script>
+<script>
+        function openSideBar(){
+            sidebarElement = document.getElementById("sidebar");
+            sidebarElement.style.visibility="visible";
+        }
+</script>
 </body>
 </html>
