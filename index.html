@@ -6,11 +6,15 @@
     <title>Sidebar</title>
     <style>
 
-.first-Div{
+#mainDiv{
+    display: block;
+}        
+
+#first-Div{
     background-color: #9fbfdf;
     height :40px;
     width:95%;
-    margin:10px 30px;
+    margin:0px 30px;
     align-content: center;
 }   
 
@@ -20,6 +24,26 @@
 
 #Draft{
    margin-left: 80%;
+}
+
+#text-Div{
+    padding:20px 10px;
+    border:#9fbfdf 2px solid;
+    width:93.1%;
+    height: 300px;
+    margin-left: 30px;
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+#span{
+    color:red;
+}
+
+#instruction{
+    text-align: start;
+    font-size: 25px;
 }
 
 .sidebar{
@@ -67,10 +91,22 @@
 <body>
 
     <i class="fa-solid fa-bars   bars"  id="bars"  onclick="openSideBar()"></i>
-    <div  class="first-Div">
+<div id="mainDiv">    
+    <div  id="first-Div">
         <p class="heading">
            <b>Due Date</b> : Fri Nov 29 2024  <b id="Draft">Draft</b>
         </p>
+    </div>
+    <div id="text-Div">
+         <b class="text-Div">Watch <span id="span">Lecture-82</span> and build a working sidebar</b>
+         <ul id="instruction">
+            <li>Design should be different than what we discussed in the class</li>
+            <li>Add icons using font awesome</li>
+            <li>Push code to GitHub repo</li>
+            <li> Host sidebar webpage on Netlify</li>
+            <li>Upload screenshot of output</li>
+            <li>Add link of GitHub repo and Netlify Link</li>
+         </ul>
     </div>  
     
     <div id="sidebar" class="sidebar">
@@ -94,30 +130,42 @@
         </div>     
         
     </div>
-
-
-
-
-
-
-
-
-<script src="https://kit.fontawesome.com/10e1ccecc8.js" crossorigin="anonymous"></script>
-<script>
+</div>   
+    <script src="https://kit.fontawesome.com/10e1ccecc8.js" crossorigin="anonymous"></script>
+    <script>
         function openSideBar(){
-            sidebarElement = document.getElementById("sidebar");
+            const sidebarElement = document.getElementById("sidebar");
             sidebarElement.style.visibility="visible";
-
-            const hamburgerMenu = documents.getElementById("bars");
+           
+            const hamburgerMenu = document.getElementById("bars");
             hamburgerMenu.style.visibility="hidden";
+
+            const  firstDiv = document.getElementById("first-Div");
+            firstDiv.style.visibility="hidden";
+     
+            const  textDiv = document.getElementById("text-Div");
+            textDiv.style.visibility="hidden";
+
+            const  mainDiv = document.getElementById("mainDiv");
+            mainDiv.style.display="flex";
+
         }
 
         function closeSidebar(){
             const sidebarElement = document.getElementById("sidebar");
             sidebarElement.style.visibility="hidden";
 
-            const hamburgerMenu = documents.getElementById("bars");
+            const hamburgerMenu = document.getElementById("bars");
             hamburgerMenu.style.visibility="visible";
+
+            const  firstDiv = document.getElementById("first-Div");
+            firstDiv.style.visibility="visible";
+
+            const  textDiv = document.getElementById("text-Div");
+            textDiv.style.visibility="visible";
+
+            const  mainDiv = document.getElementById("mainDiv");
+            mainDiv.style.display="block";
 
         }
 </script>
