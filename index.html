@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sidebar</title>
     <style>
+
+.first-Div{
+    background-color: #9fbfdf;
+    height :40px;
+    width:95%;
+    margin:10px 30px;
+    align-content: center;
+}   
+
+.heading{
+   margin:10px 10px;
+}
+
+#Draft{
+   margin-left: 80%;
+}
+
 .sidebar{
     width: 250px;
     height: 100%;
@@ -48,8 +65,14 @@
     </style>        
 </head>
 <body>
-    <i class="fa-solid fa-bars   bars"  id="bars"  onclick="openSideBar()"></i>
 
+    <i class="fa-solid fa-bars   bars"  id="bars"  onclick="openSideBar()"></i>
+    <div  class="first-Div">
+        <p class="heading">
+           <b>Due Date</b> : Fri Nov 29 2024  <b id="Draft">Draft</b>
+        </p>
+    </div>  
+    
     <div id="sidebar" class="sidebar">
         <div class="close-sidebar">
             <i class="fa-solid fa-xmark"  onclick="closeSidebar()"></i>
